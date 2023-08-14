@@ -1,0 +1,81 @@
+:root {
+  --main-border-radius: 0.3rem;
+  --buttons-container-justify-content: space-between;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 48rem;
+  background-color: white;
+  border-radius: var(--main-border-radius);
+  margin-top: -6rem;
+  margin-inline: 1rem;
+  padding: 2rem;
+}
+
+#text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+
+#author {
+  align-self: flex-end;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: var(--buttons-container-justify-content);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: var(--main-border-radius);
+  cursor: pointer;
+  font-size: inherit;
+  color: #fff;
+  height: 3rem;
+  padding: 1.5rem;
+}
+
+@media (width <= 320px) {
+  :root {
+    --buttons-container-justify-content: center;
+  }
+}
